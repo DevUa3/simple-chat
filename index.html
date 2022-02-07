@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="http://localhost:5000/socket.io/socket.io.js"></script>
+  <title>chat App</title>
+</head>
+<body>
+  <div id="continer">
+    <div id="logContiner">
+      <form id="logForm">
+        <h2 class="titles">Welcome!<small>to use the application you must enter your name</small></h1>
+        <p id="errorMessage"></p>
+        <input type="text" id="userName" class="inputTexts" placeholder="Name here..." required autocomplete="off">
+        <button type="button" class="buttons" onclick="isEmty()">Go</button>
+      </form>
+    </div>
+    <div id="chatcontiner">
+      <div id="messages"></div>
+      <form id="chatForm">
+        <input type="text" class="inputTexts" placeholder="message">
+        <input type="submit" class="buttons" value="send">
+      </form>
+    </div>
+  </div>
+</body>
+
+<script src="script.js"></script>
+</html>

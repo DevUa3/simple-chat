@@ -1,0 +1,163 @@
+*{
+  padding: 0;
+  margin: 0;
+  --alert-color: rgba(238, 109, 87, 1);
+  --suxes-color: rgba(26, 78, 10, 0.9);
+  --text-color: rgb(73, 73, 72);
+  --scrol-coor: rgba(0,153,204, 0.05);
+}
+#continer{
+  font-family: monospace;
+  background: linear-gradient(90deg, #182c2e 2%, #32575a 50%, #77d6e2 100%, #f1f3f3 1%);
+  font-size: 16px;
+  min-width: 100vw;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#logContiner{
+  width: 100%;
+  transition: 1s linear;
+  transform: translateY(8em);
+  z-index: 2;
+}
+#logForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#logForm .titles{
+  text-align: center;
+  color: rgba(0, 3, 0, 0.7);
+}
+#logForm .titles small{
+  padding: 1em;
+  display: block;
+}
+#logForm .inputTexts{
+  width: 78%;
+  height: 3em;
+  padding-left: 1em;
+  border-radius: 0.4em;
+  color: var(--text-color);
+  border: none;
+  outline: none;
+}
+#logForm p{
+  font-size: 0.7em;
+  color: var(--alert-color);
+}
+#logForm .buttons{
+  margin: 1em 0em 0em 0em;
+  font-size: 1.4em;
+  width: 20%;
+  height: 2em;
+  color: var(--suxes-color);
+  border: 1px solid rgba(0,153,204, 0.05);
+}
+/*continer chat*/
+#chatcontiner{
+  width: 100%;
+  height: 85vh;
+  transform: translateY(-8em);
+  z-index: 1;
+  transition: opacity 500ms linear;
+  opacity: 0;
+}
+#messages{
+  background-image: url('/image/nose.png');
+  overflow: auto;
+    scrollbar-color: var(--scrol-coor) transparent;/*only fireFox*/
+    scrollbar-width: thin;/*only fireFox*/
+  width: 80%;
+  height: 87%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -10px 5px 10px 1px rgba(0, 0, 0, 0.1);
+}
+#messages::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+#messages::-webkit-scrollbar-thumb {
+  background-color: var(--scrol-coor);
+}
+#messages::-webkit-scrollbar {
+  width: 1px;
+}
+#messages:first-child{
+  padding: 1em; 
+}
+#messages p{
+ align-self: center;
+ font-size: 1em;
+ font-style: oblique;
+}
+#messages .conected{
+  color: rgba(109, 236, 70, 0.9);
+}
+#messages .disconected{
+  color: var(--alert-color);
+}
+#messages div{
+  margin-bottom: 0.1em;
+  font-size: 1.2em;
+}
+#messages .left{
+  box-shadow: -5px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  color: rgb(193, 194, 141);
+  align-self: flex-start;
+  margin-left: 2em;
+  padding: 0.1em 1em 0.1em 0em;
+}
+#messages .rigth{
+  box-shadow: -5px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  margin-right: 2em;
+  align-self: flex-end;
+  padding: 0.1em 0em 0.1em 1em; 
+}
+#chatForm{
+  width: 80%;
+  margin-left: 10%;
+}
+#chatForm .inputTexts{
+  position: absolute;
+  color: var(--text-color);
+  font-size: 1em;
+  bottom: -2em;
+  width: 60%;
+  border-radius: 1.5em 1.5em;
+  padding-left: 1em;
+  border: none;
+  outline: none;
+  height: 3em;
+}
+#chatForm .buttons{
+  position: absolute;
+  text-align: center;
+  font-size: 0.6em;
+  color: var(--suxes-color);
+  width: 5em;
+  height: 5em;
+  background-color:  white;
+  border-radius: 100%;
+  bottom: -3.3em;
+  right: 7em;
+  cursor: pointer;
+}
+@media screen and (min-width:401px){
+  #logContiner{
+    max-width: 400px;
+  }
+  #chatcontiner{
+    max-width: 600px;
+  }
+}
+@media screen and (max-width:242px) {
+  #logForm p{
+    font-size: 0.6em;
+    margin-left: 0.9em;
+  }
+}

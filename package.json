@@ -1,0 +1,17 @@
+{
+  "name": "mychatchalenge",
+  "version": "1.0.0",
+  "description": "my fist app whit vanilla javascript",
+  "main": "script.js",
+  "scripts": {
+  "devStart": "nodemon server.js"
+  },
+  "author": "ua3",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.15"
+  }
+}
