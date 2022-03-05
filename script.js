@@ -27,15 +27,6 @@ function main(){
     createElementwhitMessage(`${message.message}`, contentMessages, 'left')
   })
 }
-//it is necessary to make that when giving enter enter the chat..
-inputText.addEventListener('keyup', function(e){
-  e.preventDefault();
-  if(e.keyCode === 13){
-    isEmty()
-  }
-})
-
-
 function isEmty(){
   let formLog = logContiner.childNodes[1];
   
